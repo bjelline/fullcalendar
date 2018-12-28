@@ -7061,7 +7061,7 @@ var DayGrid = /** @class */ (function (_super) {
                 col++;
             }
         };
-        // ============= this "less than" is the only change =====
+        // ============= this "less than" is the first change =====
         if (levelLimit && levelLimit <= rowStruct.segLevels.length) {
             levelSegs = rowStruct.segLevels[levelLimit - 1];
             cellMatrix = rowStruct.cellMatrix;
@@ -7273,7 +7273,8 @@ var DayGrid = /** @class */ (function (_super) {
     // If `startLevel` is specified, returns only events including and below that level. Otherwise returns all segs.
     DayGrid.prototype.getCellSegs = function (row, col, startLevel) {
         var segMatrix = this.eventRenderer.rowStructs[row].segMatrix;
-        var level = startLevel || 0;
+        // ===================== second change ===================
+        var level = 0; // startLevel || 0;
         var segs = [];
         var seg;
         while (level < segMatrix.length) {

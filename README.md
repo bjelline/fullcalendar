@@ -1,3 +1,10 @@
+# A For of Fullcalendar Ruby Gem
+
+
+just one change: month view always collapses all entries into one
+'more' link, no matter what number.  (makes `eventLimit` pointless)
+
+
 # Fullcalendar Ruby Gem
 
 This gem just includes [fullcalendar](https://fullcalendar.io/) and [scheduler](https://fullcalendar.io/scheduler/) as an asset in rails applications or other ruby frameworks

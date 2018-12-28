@@ -7061,7 +7061,8 @@ var DayGrid = /** @class */ (function (_super) {
                 col++;
             }
         };
-        if (levelLimit && levelLimit < rowStruct.segLevels.length) {
+        // ============= this "less than" is the only change =====
+        if (levelLimit && levelLimit <= rowStruct.segLevels.length) {
             levelSegs = rowStruct.segLevels[levelLimit - 1];
             cellMatrix = rowStruct.cellMatrix;
             limitedNodes = rowStruct.tbodyEl.children().slice(levelLimit) // get level <tr> elements past the limit
